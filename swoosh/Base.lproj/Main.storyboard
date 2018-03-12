@@ -62,7 +62,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="cUq-tE-TgX" kind="show" id="zoY-5u-Qc6"/>
+                                    <segue destination="cUq-tE-TgX" kind="show" id="i2C-El-dht"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swooshLogo" translatesAutoresizingMaskIntoConstraints="NO" id="jKb-cv-ha0">
@@ -103,7 +103,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="desiredLeagueBG" translatesAutoresizingMaskIntoConstraints="NO" id="JJs-Vw-hGr">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8KM-pI-1Bf" customClass="buttonBorder" customModule="swoosh" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8KM-pI-1Bf" customClass="buttonBorder" customModule="swoosh" customModuleProvider="target">
                                 <rect key="frame" x="20" y="597" width="335" height="50"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -120,6 +120,9 @@
                                         <color key="value" white="1" alpha="0.75" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="leagueNextPressed:" destination="cUq-tE-TgX" eventType="touchUpInside" id="wG3-vo-aZe"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Yvs-so-jLH">
                                 <rect key="frame" x="20" y="194.5" width="335" height="200"/>
@@ -141,6 +144,9 @@
                                                 <color key="value" white="1" alpha="0.75" colorSpace="calibratedWhite"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="menPressed:" destination="cUq-tE-TgX" eventType="touchUpInside" id="wCU-G2-WXc"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3xT-5C-A6h" customClass="buttonBorder" customModule="swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="75" width="335" height="50"/>
@@ -159,6 +165,9 @@
                                                 <color key="value" white="1" alpha="0.75" colorSpace="calibratedWhite"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="womanPressed:" destination="cUq-tE-TgX" eventType="touchUpInside" id="Lgh-in-JqA"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Omy-l2-Nqd" customClass="buttonBorder" customModule="swoosh" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="150" width="335" height="50"/>
@@ -177,6 +186,9 @@
                                                 <color key="value" white="1" alpha="0.75" colorSpace="calibratedWhite"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="coedPressed:" destination="cUq-tE-TgX" eventType="touchUpInside" id="fuy-g1-vmZ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -224,6 +236,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3ea-Zt-MXt"/>
                     </view>
+                    <connections>
+                        <outlet property="nextButton" destination="8KM-pI-1Bf" id="ePU-z0-H5X"/>
+                        <segue destination="SrK-BU-XPy" kind="show" identifier="leaugeSegueToSkill" id="wbo-SZ-dXe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sIc-p5-TVb" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="UKi-z0-gDM" userLabel="Exit" sceneMemberID="exit"/>
